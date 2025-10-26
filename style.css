@@ -1,0 +1,425 @@
+/* ===============================
+   RESET & BASE STYLE
+================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: #f9fafc;
+  color: #333;
+  overflow-x: hidden;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+/* ===============================
+   HEADER
+================================*/
+header {
+  margin-top: 70px;
+  padding: 200px 20px;
+  text-align: center;
+  color: white;
+  border-radius: 1rem;
+  background-image: linear-gradient(
+      90deg,
+      rgba(24, 7, 54, 0.5),
+      rgba(255, 224, 85, 0.5)
+    ),
+    url(./assets/header3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header h1 {
+  font-family: "Gluten", cursive;
+  font-size: 3rem;
+}
+
+header h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+/* ===============================
+   CONTENT SECTIONS
+================================*/
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#boxgt,
+#boxchotrong,
+#boxknlop10,
+#boxknlop11,
+#boxknlop12,
+#guigam {
+  border-radius: 1rem;
+  padding: 20px;
+  color: white;
+}
+
+#boxgt {
+  background-color: rgba(255, 172, 28, 0.5);
+  text-align: center;
+}
+
+#boxchotrong {
+  background-image: url(./assets/chotrong.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+#boxchotrong p {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+#boxknlop10 {
+  background-color: rgba(245, 111, 34, 0.5);
+}
+
+#boxknlop11 {
+  background-color: rgba(15, 53, 140, 0.5);
+}
+
+#boxknlop12 {
+  background-color: rgba(252, 216, 17, 0.5);
+}
+
+/* ===============================
+   COMMON SECTIONS (KN, IMAGES, EXTRA)
+================================*/
+.kn-content,
+.kn-images,
+.kn-extra {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.kn-text {
+  flex: 1 1 300px;
+  font-size: 1.2rem;
+}
+
+.kn-images img,
+.kn-images video {
+  width: 250px;
+  height: auto;
+}
+
+/* ===============================
+   GỬI GẮM
+================================*/
+#guigam {
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  color: white;
+}
+
+#guigam h1 {
+  color: black;
+  width: 45%;
+}
+
+.boxguigam {
+  width: 18%;
+  min-width: 220px;
+  text-align: center;
+  padding: 10px;
+  color: darkblue;
+  border-radius: 1rem;
+  background-image: linear-gradient(
+    90deg,
+    rgba(235, 64, 52, 0.5),
+    rgba(52, 235, 180, 0.5)
+  );
+}
+
+.round {
+  border-radius: 50%;
+  margin: 10px auto;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* ===============================
+   FOOTER
+================================*/
+footer {
+  margin: 30px 0 0;
+  padding: 20px;
+  background-color: grey;
+  border-radius: 0.5rem;
+  color: white;
+  list-style: none;
+  text-align: center;
+}
+
+/* ===============================
+   HEADER GAP & SECTION WRAP
+================================*/
+.header-section {
+  padding: 0 20px;
+}
+
+.gap-header {
+  height: 50px;
+}
+
+/* ===============================
+   NAVIGATION
+================================*/
+.nav {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: rgb(8, 41, 94);
+}
+
+.nav-container {
+  width: 95%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logo img {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+}
+
+/* ====== Hamburger button ====== */
+.hamburger {
+  width: 28px;
+  height: 22px;
+  position: relative;
+  display: none;
+  cursor: pointer;
+  z-index: 1100;
+  transition: 0.3s;
+}
+
+.hamburger span {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  left: 0;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 9px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 18px;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 9px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.nav-item:hover {
+  color: #ffd966;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================*/
+
+/* ---------- Tablet ---------- */
+@media (max-width: 992px) {
+  header {
+    padding: 160px 20px;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header h3 {
+    font-size: 1.2rem;
+  }
+
+  .boxguigam {
+    width: 45%;
+  }
+
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 40px;
+    right: 20px;
+  }
+
+  .nav-list {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 200px;
+    background-color: rgb(8, 41, 94);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom-left-radius: 12px;
+    transition: right 0.3s ease;
+  }
+
+  .nav-list.active {
+    right: 0;
+  }
+
+  .nav-item {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  #boxknlop10 iframe {
+    width: 100% !important;
+    height: 390px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  .nav-item {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 2.6rem;
+  }
+
+  header h3 {
+    font-size: 1rem;
+  }
+
+  .boxguigam {
+    width: 100%;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  #guigam {
+    padding: 0;
+  }
+
+  .kn-images img,
+  .kn-images video {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .kn-content,
+  .kn-images,
+  .kn-extra {
+    gap: 20px;
+  }
+
+  .logo img {
+    max-width: 120px;
+  }
+
+  .nav {
+    height: 80px;
+  }
+
+  .hamburger {
+    top: 30px;
+  }
+
+  .gap-header {
+    height: 30px;
+  }
+
+  #guigam h1 {
+    width: 100%;
+  }
+
+  footer {
+    margin: 10px 0 0;
+  }
+}
+
+/* ===============================
+   IFRAME FIXED HEIGHT (DESKTOP)
+================================*/
+#boxknlop10 iframe {
+  width: 100% !important;
+  height: 560px;
+}
